@@ -20,16 +20,14 @@ class MainActivity : AppCompatActivity() {
             ///prueba repositorio
             binding.loginbtn.setOnClickListener(){
                 if(validaLogin(binding.username.text.toString(),binding.password.text.toString())){
-                    alert("Login correcto")
+                    val i = Intent(this,PaginaInicioMainActivity::class.java)
+                    startActivity(i)
+                    finish();
                 }else{
-                    print("!!!!!!!!!!!!!!!!!!!LOGIN INCORRECTO")
+                   alert("Login incorrecto, verifique.")
                 }
-                val i = Intent(this,PaginaInicioMainActivity::class.java)
-                startActivity(i)
-                finish();
             }
         }////Fin funcion onCreate
-
 
     private fun validaLogin(usuario:String,clave:String) : Boolean {
         return usuario.trim().lowercase() == clave.trim().lowercase()
