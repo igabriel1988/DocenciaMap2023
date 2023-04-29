@@ -6,11 +6,45 @@
     tools:context=".PaginaInicioMainActivity">
 
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="220dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="281dp"
+        android:text="¿Desea recibir correos?" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="222dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="342dp"
+        android:text="¿Desea globos de notificación?" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notification Fragment"
-        android:textSize="25dp"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@+id/checkBox"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="52dp"
+        android:checked="true" />
 
-
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="277dp"
+        android:layout_marginEnd="52dp"
+        android:checked="true" />
 </RelativeLayout>

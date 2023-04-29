@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item android:title="Principal">
+    <item android:title="Principal" >
         <menu>
             <item
                 android:id="@+id/main"
                 android:icon="@drawable/ic_home_black_24dp"
-                android:title="INICIO"/>
+                android:title="INICIO"
+                />
 
             <item
                 android:id="@+id/notificaciones"
-                android:icon="@drawable/ic_group_black_24dp"
+                android:icon="@drawable/ic_baseline_event_available_24"
                 android:title="NOTIFICACIONES"/>
             <item
                 android:id="@+id/baja"
-                android:icon="@drawable/ic_group_black_24dp"
-                android:title="BAJA"/>
+                android:icon="@drawable/ic_contacto"
+                android:title="MIS DATOS"/>
             <item
                 android:id="@+id/salir"
-                android:icon="@drawable/ic_group_black_24dp"
+                android:icon="@drawable/ic_baseline_output_24"
                 android:title="SALIR"/>
         </menu>
     </item>

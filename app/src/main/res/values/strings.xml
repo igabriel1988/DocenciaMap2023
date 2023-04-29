@@ -5,8 +5,11 @@
     <string name="open">open</string>
     <string name="close">close</string>
 
-    <string name="hint_nombre">Nombre:</string>
-    <string name="hint_correo_electronico">Correo electronico:</string>
-    <string name="btn_guarda">Guardar registro</string>
+    <string name="hint_nombre">NOMBRE:</string>
+    <string name="hint_correo">CORREO:</string>
+    <string name="hint_correo_electronico">igabriel@gmail.com</string>
+    <string name="nombre">Ivan Gabriel</string>
+    <string name="btn_guarda">GUARDAR</string>
     <string name="menu_nuevo">Nuevo registro</string>
+    <string name="cancelar">CANCELAR</string>
 </resources>

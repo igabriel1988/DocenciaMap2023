@@ -28,12 +28,11 @@ public class ActivityUsuario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usuario);
 
-        txtNombre = findViewById(R.id.txtNombre);
+        //txtNombre = findViewById(R.id.txtNombre);
 
-        txtCorreo = findViewById(R.id.txtCorreoElectronico);
-        fabEditar = findViewById(R.id.fabEditar);
-        fabEliminar = findViewById(R.id.fabEliminar);
-        btnGuarda = findViewById(R.id.btnGuarda);
+       // txtCorreo = findViewById(R.id.txtCorreoElectronico);
+      //  fabEditar = findViewById(R.id.fabEditar);
+
         btnGuarda.setVisibility(View.INVISIBLE);
 
         if(savedInstanceState == null){

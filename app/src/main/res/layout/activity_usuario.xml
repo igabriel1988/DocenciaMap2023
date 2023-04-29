@@ -1,68 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ActivityUsuario">
 
-    <LinearLayout
-        android:layout_width="325dp"
-        android:layout_height="376dp"
-        android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="34dp"
+        android:text="@string/nombre" />
 
-        <TextView
-            android:id="@+id/viewCorreo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hint_correo_electronico" />
+    <EditText
+        android:id="@+id/txtCorreoElectronico"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:clickable="true"
-            android:src="@drawable/ic_edit" />
+        android:layout_below="@+id/txtNombre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
+        android:inputType="textEmailAddress"
+        android:labelFor="@+id/viewCorreo"
+        android:textSize="18sp"
+        android:text="@string/hint_correo_electronico"/>
 
-        <EditText
-            android:id="@+id/txtCorreoElectronico"
-            android:layout_width="354dp"
-            android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/viewNombre"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/viewNombre2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/hint_correo" />
 
-            android:inputType="textEmailAddress"
-            android:labelFor="@+id/viewCorreo"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/viewNombre2"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/hint_nombre" />
 
-        <Button
-            android:id="@+id/btnGuarda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/btn_guarda" />
+    <Button
+        android:id="@+id/btnGuarda"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewNombre"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="46dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/btn_guarda"
+        android:textColor="@color/white" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabEliminar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:clickable="true"
-            android:src="@drawable/ic_delete" />
+    <Button
+        android:id="@+id/btnGuarda2"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewNombre"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="193dp"
+        android:layout_marginTop="47dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/cancelar"
+        android:textColor="@color/white" />
 
-        <EditText
-            android:id="@+id/txtNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:labelFor="@+id/viewNombre"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/viewNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hint_nombre" />
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

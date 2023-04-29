@@ -3,8 +3,22 @@ package com.example.docenciamap2023;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.Editable;
+import android.util.AttributeSet;
+import android.view.InflateException;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.docenciamap2023.Fragments.DetalleCursoFragment;
 import com.example.docenciamap2023.Fragments.DisponiblesFragment;
@@ -59,9 +73,11 @@ public class PaginaInicioMainActivity extends AppCompatActivity implements Navig
         ////Menu de bottom bar
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 
+
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 //para cerrar automaticamente el menu
+
 
                 boolean fragmentTan = false;
 
@@ -117,12 +133,17 @@ public class PaginaInicioMainActivity extends AppCompatActivity implements Navig
     }
 
     ////Menu de hamburguesa
+
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         //para cerrar automaticamente el menu
         drawerLayout.closeDrawer(GravityCompat.START);
 
+
+
         if(menuItem.getItemId() == R.id.main){
+
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_fragment,new MainFragment());
@@ -140,8 +161,14 @@ public class PaginaInicioMainActivity extends AppCompatActivity implements Navig
             fragmentTransaction.replace(R.id.container_fragment,new PerfilUsuarioFragment());
             fragmentTransaction.commit();
         }
+        if(menuItem.getItemId() == R.id.salir){
+            Intent intent  = new Intent(getApplicationContext(), MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
         return false;
     }
+
 
 
     ////Detalle del curso
